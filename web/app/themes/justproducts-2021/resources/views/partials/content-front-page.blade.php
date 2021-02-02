@@ -1,10 +1,11 @@
+@php $intro_video = $data['intro_video'] @endphp
+
 <section id="intro">
   <div class="image">
-    <img src="" />
+    <img src="{{ $intro_video['poster']['sizes']['medium'] }}" />
   </div>
 
     @php the_content() @endphp
-    @php $intro_video = $data['intro_video'] @endphp
     @if($intro_video)
     <div class="video">
       <video autoplay loop muted poster="{{ $intro_video['poster']['url'] }}">
@@ -89,6 +90,7 @@
         </div>
       @endforeach
     </div>
+    <a class="button" href="#contact" target="_blank">Contact Us</a>
   </section>
 @endif
 
@@ -126,7 +128,7 @@
       <h3>{{ $testimonials['subtitle'] }}</h3>
     </header>
 
-    <div class="testimonials">
+    <div class="testimonials carousel">
       @foreach ($testimonials['testimonials'] as $testimonial)
         <div class="testimonial">
         <div class="wrap">

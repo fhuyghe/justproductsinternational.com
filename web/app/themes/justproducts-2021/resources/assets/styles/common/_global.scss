@@ -79,3 +79,21 @@ body{
         }
     }
 }
+
+.carousel{
+    width: 100vw;
+    margin-left: -15px;
+    overflow: hidden;
+
+    .slick-prev:before, 
+    .slick-next:before{
+        color: theme-color(green);
+    }
+
+    @include media-breakpoint-up(md){
+        overflow: initial;
+        margin-left: 0;
+        width: 100%;
+        padding: 0 15px;
+    }
+}

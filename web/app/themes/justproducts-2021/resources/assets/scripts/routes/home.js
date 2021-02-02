@@ -22,7 +22,12 @@ export default {
     $('.hamburger').on('click', function () {
       $('.hamburger').toggleClass('is-active');
       $('.menu').toggleClass('active');
-     });
+    });
+    
+    $('.nav a').on('click', function () { 
+      $('.hamburger').removeClass('is-active');
+      $('.menu').removeClass('active');
+    })
 
     //FAQ
     $('.question').on('click', function (e) { 
@@ -36,12 +41,13 @@ export default {
     })
 
     //Slick
-    $('.carousel').slick({
+    $('.all-products').slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       centerMode: true,
       mobileFirst: true,
+      arrows: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -67,6 +73,7 @@ export default {
       slidesToScroll: 1,
       centerMode: true,
       mobileFirst: true,
+      arrows: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -78,8 +85,8 @@ export default {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2,
+            slidesToScroll: 2,
             centerMode: false,
           },
         },
@@ -116,7 +123,6 @@ export default {
 
     // Revealed elements
     function revealAddClass(el) {
-      console.log('revealed', el);
       el.classList.add('revealed');
     }
 

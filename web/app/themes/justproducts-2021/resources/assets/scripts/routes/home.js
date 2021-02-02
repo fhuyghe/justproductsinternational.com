@@ -115,16 +115,17 @@ export default {
     ScrollReveal().reveal('h2', slideUp);
 
     // Revealed elements
-    function revealAddClass (el) {
+    function revealAddClass(el) {
+      console.log('revealed', el);
       el.classList.add('revealed');
     }
 
     var revealClass = {
       distance: 0,
       opacity: null,
-      afterReveal: revealClass,
+      afterReveal: revealAddClass,
     }
     
-    ScrollReveal().reveal('.reveal', revealAddClass);
+    ScrollReveal().reveal('.reveal', revealClass);
   },
 };

@@ -42,7 +42,7 @@ section{
         }
 
         @include media-breakpoint-up(md){
-            padding-top: 200px;
+            padding: 200px 100px;
 
             video{
                 display: block;
@@ -57,6 +57,10 @@ section{
     &#menards{
         padding-top: 0;
 
+        @include media-breakpoint-up(md){
+            padding-top: 100px;
+        }
+        
         .info{
             text-align: center;
 

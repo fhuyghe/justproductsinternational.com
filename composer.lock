@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62b2211970973e68a0d6c0d8c22eef22",
+    "content-hash": "fa4cc9ef89daf71abbfc4ce1827734df",
     "packages": [
         {
             "name": "13milliseconds/interactive-geo-maps-premium",
@@ -41,6 +41,42 @@
                 "issues": "https://github.com/13milliseconds/interactive-geo-maps-premium/issues"
             },
             "time": "2021-02-02T03:25:30+00:00"
+        },
+        {
+            "name": "13milliseconds/tp-add-on-extra-languages",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:13milliseconds/tp-add-on-extra-languages.git",
+                "reference": "aa0c240fb875d24cbe829c8f74b07aedae32d5c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/13milliseconds/tp-add-on-extra-languages/zipball/aa0c240fb875d24cbe829c8f74b07aedae32d5c7",
+                "reference": "aa0c240fb875d24cbe829c8f74b07aedae32d5c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "TranslatePress",
+                    "homepage": "https://simplepodcastpress.com/"
+                }
+            ],
+            "description": "TranslatePress",
+            "homepage": "https://github.com/13milliseconds/simple-podcast-press",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/13milliseconds/tp-add-on-extra-languages/tree/main",
+                "issues": "https://github.com/13milliseconds/tp-add-on-extra-languages/issues"
+            },
+            "time": "2021-02-02T21:02:25+00:00"
         },
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -1559,6 +1595,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "13milliseconds/interactive-geo-maps-premium": 20,
+        "13milliseconds/tp-add-on-extra-languages": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,

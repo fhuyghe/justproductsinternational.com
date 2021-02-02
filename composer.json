@@ -34,6 +34,10 @@
       "url": "git@github.com:13milliseconds/interactive-geo-maps-premium.git"
     },
     {
+      "type": "vcs",
+      "url": "git@github.com:13milliseconds/tp-add-on-extra-languages.git"
+    },
+    {
       "type": "composer",
       "url": "https://composer.deliciousbrains.com/8DAF13E16CC13B06BE314F3D5684DA29"
     },
@@ -73,7 +77,8 @@
     "wpackagist-plugin/translatepress-multilingual":"1.8.2",
     "wpackagist-plugin/wpforms-lite":"1.6.4.1",
     "wpackagist-plugin/interactive-geo-maps":"1.4.5",
-    "13milliseconds/interactive-geo-maps-premium": "dev-main"
+    "13milliseconds/interactive-geo-maps-premium": "dev-main",
+    "13milliseconds/tp-add-on-extra-languages": "dev-main"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",

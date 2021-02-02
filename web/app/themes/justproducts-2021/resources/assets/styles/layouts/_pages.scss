@@ -114,6 +114,42 @@ section{
 
         .steps{
             overflow: hidden;
+
+            &.revealed{
+                .step{
+                    .info{
+                        animation: slideUp .5s normal forwards;
+                    }
+
+                    &:after{
+                        animation: reveal 4s normal forwards;
+                    }
+                    
+                    &:nth-child(2){
+                        .info,
+                        &:after{
+                            animation-delay: .5s;
+                        }
+                    }
+
+                    &:nth-child(3){
+                        .info,
+                        &:after{
+                            animation-delay: 1.5s;
+                        }
+                    }
+
+                    &:nth-child(4){
+                        .info{
+                            animation-delay: 2.5s;
+                        }
+
+                        &:after{
+                            animation: none;
+                        }
+                    }
+                }
+            }
         }
 
         .step{
@@ -154,12 +190,16 @@ section{
                 background-color: theme-color(yellow);
             }
 
+            .info{
+                opacity: 0;
+            }
+
             @include media-breakpoint-up(md){
                 &:after{
                     content: '';
                     display: block;
                     height: 1px;
-                    width: 100%;
+                    width: 0%;
                     border-bottom: 1px solid black;
                     position: absolute;
                     left: 50%;
@@ -184,6 +224,10 @@ section{
 
         .featured{
             margin-bottom: $grid-gutter / 2;
+
+            .product .wrap{
+                padding-top: 50%;
+            }
         }
 
         .carousel{
@@ -281,6 +325,16 @@ section{
                 img{
                     width: 100%;
                 }
+            }
+
+            h4{
+                font-size: 1em;
+                font-weight: 400;
+                font-style: italic;
+            }
+
+            h5{
+                font-size: 1em;
             }
         }
     }
@@ -397,3 +451,26 @@ section{
         }
     }
 }
+
+@keyframes reveal {
+    0% {
+      width: 1%;
+    }
+    25% {
+      width: 100%;
+    }
+    100% {
+        width: 100%;
+      }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+  }

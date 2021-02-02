@@ -71,7 +71,7 @@
       <h3>{{ $howItWorks['subtitle'] }}</h3>
     </header>
 
-    <div class="row steps">
+    <div class="row steps reveal">
       @foreach ($howItWorks['steps'] as $step)
         <div class="col-12 col-md-3 step">
           <div class="wrap">
@@ -81,8 +81,10 @@
           <div class="number">
             {{ $loop->iteration }}
           </div>
-          <h4>{{ $step['title'] }}</h4>
-          <p>{{ $step['description'] }}</p>
+          <div class="info">
+            <h4>{{ $step['title'] }}</h4>
+            <p>{{ $step['description'] }}</p>
+          </div>
         </div>
         </div>
       @endforeach
@@ -124,7 +126,7 @@
       <h3>{{ $testimonials['subtitle'] }}</h3>
     </header>
 
-    <div class="carousel">
+    <div class="testimonials">
       @foreach ($testimonials['testimonials'] as $testimonial)
         <div class="testimonial">
         <div class="wrap">
@@ -133,7 +135,7 @@
           </div>
           {!! $testimonial['testimonial'] !!}
           <h4>{{ $testimonial['author'] }}</h4>
-          <h5>{{ $testimonial['company'] }}</h5>
+          <h5>{{ $testimonial['country'] }}</h5>
         </div>
       </div>
       @endforeach

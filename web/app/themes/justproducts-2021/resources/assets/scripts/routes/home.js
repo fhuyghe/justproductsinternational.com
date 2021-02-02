@@ -61,6 +61,31 @@ export default {
       ],
     });
     
+    $('.testimonials').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            centerMode: false,
+          },
+        },
+      ],
+    });
+    
     $('.steps').slick({
       infinite: false,
       slidesToShow: 1,
@@ -88,5 +113,18 @@ export default {
     };
     
     ScrollReveal().reveal('h2', slideUp);
+
+    // Revealed elements
+    function revealAddClass (el) {
+      el.classList.add('revealed');
+    }
+
+    var revealClass = {
+      distance: 0,
+      opacity: null,
+      afterReveal: revealClass,
+    }
+    
+    ScrollReveal().reveal('.reveal', revealAddClass);
   },
 };

@@ -1,0 +1,9 @@
+footer.content-info{
+    background: theme-color(black);
+    color: theme-color(white);
+    padding: $grid-gutter;
+
+    .contact{
+        text-align: right;
+    }
+}

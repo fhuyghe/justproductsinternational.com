@@ -1,0 +1,81 @@
+html{
+    height: 100%;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Graphik Web', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100%;
+
+    h2{
+        display: inline-block;
+        color: theme-color(green);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        padding-bottom: 5px;
+
+        background-image: url('../images/menards-swoosh.png');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: 150px auto;
+    }
+
+    h3{
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-bottom: $grid-gutter;
+        
+        @include media-breakpoint-up(md){
+            font-size: 2em;
+        }
+    }
+
+    a.button,
+    .wp-block-button__link.no-border-radius{
+        font-size: 1em;
+        border: 1px solid;
+        line-height: 1em;
+        padding: 1em 20px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        transition: .25s;
+
+        &:before{
+            content: '';
+            transition: .25s;
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: theme-color(green);
+            transform: translateX(-100%);
+            z-index: -1;
+        }
+        
+        &:hover{
+            color: theme-color(white);
+            text-decoration: none;
+
+            &:before{
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.slick-track{
+    display: flex;
+
+    .slick-slide{
+        display: flex;
+        height: auto;
+
+        &>div{
+            width: 100%;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 section{
-    padding: $grid-gutter 0;
-    
+    padding: 50px 0;
+
     @include media-breakpoint-up(md){
         padding: 100px 0;
     }
@@ -22,6 +22,7 @@ section{
         flex-flow: column;
         justify-content: center;
         min-height: 100vh;
+        padding: 0;
 
         .image{
             margin-bottom: $grid-gutter;
@@ -54,6 +55,8 @@ section{
     }
 
     &#menards{
+        padding-top: 0;
+
         .info{
             text-align: center;
 
@@ -359,15 +362,13 @@ section{
             }
         }
 
-        .phone{
-            &:before{
-                content: 'Phone:'
-            }
-        }
-        
+        .phone,
         .email{
-            &:before{
-                content: 'Email:'
+            //display: flex;
+
+            img{
+                width: 20px;
+                margin-right: 10px;
             }
         }
 

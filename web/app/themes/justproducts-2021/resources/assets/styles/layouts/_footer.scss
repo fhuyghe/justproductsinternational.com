@@ -3,6 +3,11 @@ footer.content-info{
     color: theme-color(white);
     padding: $grid-gutter;
 
+    .copyright{
+        font-style: italic;
+        font-size: .9em;
+    }
+
     .contact{
         text-align: right;
     }

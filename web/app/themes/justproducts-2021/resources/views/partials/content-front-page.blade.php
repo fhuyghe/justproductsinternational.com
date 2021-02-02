@@ -155,8 +155,11 @@
   <div class="row">
     <div class="col-md-6">
       <p>{{ $contact['description'] }}</p>
-      <p class="phone">{{ $contact['phone_number'] }}</p>
+      <p class="phone">
+        <img src="@asset('images/whatsapp-icon.png')" />
+        {{ $contact['phone_number'] }}</p>
       <p class="email">
+        <img src="@asset('images/email-icon.png')" />
         <a href="mailto:{{ $contact['email'] }}">{{ $contact['email'] }}</a>
       </p>
     </div>

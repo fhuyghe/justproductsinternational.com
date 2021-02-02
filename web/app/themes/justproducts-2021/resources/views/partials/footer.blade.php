@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 copyright">
-        Copyright
+        2021© Just Products International
       </div>
       <div class="col-md-6 contact">
-        Contact info
+        
       </div>
     </div>
   </div>

@@ -56,7 +56,7 @@
       <a class="button" href="{{ $map['link'] }}" target="_blank">{{ $map['link_text'] }}</a>
     </header>
     <div class="map-wrap">
-      <div id="interactiveMap">
+      <div id="interactiveMap" class="reveal">
         {!! do_shortcode('[display-map id="105"]') !!}
       </div>
     </div>

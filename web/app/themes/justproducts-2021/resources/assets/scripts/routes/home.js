@@ -153,9 +153,8 @@ export default {
     // create a scene
     if (window.innerWidth > 770) {
       new ScrollMagic.Scene({
-        duration: $('#menards .images').height() / 2 - $('#menards .info').height() / 2, // the scene should last for a scroll distance of 100px
+        duration: $('#menards .images').height(), // the scene should last for a scroll distance of 100px
         triggerElement: '#menardInfo',
-        offset: $('#menards .info').height() / 2,
       })
         .setPin('#menardInfo') // pins the element for the the scene's duration
         .addTo(controller); // assign the scene to the controller

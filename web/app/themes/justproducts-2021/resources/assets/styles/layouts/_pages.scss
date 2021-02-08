@@ -2,6 +2,10 @@ section{
     padding: 50px 0;
 
     @include media-breakpoint-up(md){
+        //padding: 100px 0;
+    }
+    
+    @include media-breakpoint-up(lg){
         padding: 100px 0;
     }
 
@@ -32,6 +36,25 @@ section{
             max-width: 800px;
             line-height: 1.5em;
             margin: 0 auto $grid-gutter;
+
+            span{
+                opacity: 0;
+                animation: slideUp 1s normal forwards;
+
+                &:first-child{
+                    display: block;
+                    margin-bottom: $grid-gutter;
+                }
+
+                &:nth-child(2){
+                    animation-delay: 1s;
+                }
+                
+                &:last-child{
+                    animation-delay: 2s;
+                    color: theme-color(green);
+                }
+            }
         }
 
         video{
@@ -42,15 +65,19 @@ section{
         }
 
         @include media-breakpoint-up(md){
-            padding: 200px 100px;
+            padding: 200px 0 100px;
 
             video{
                 display: block;
             }
-
+    
             .image{
                 display: none;
             }
+        }
+
+        @include media-breakpoint-up(lg){
+            padding: 200px 100px;
         }
     }
 
@@ -90,7 +117,7 @@ section{
                     color: theme-color(green);
                     font-weight: 500;
 
-                    @include media-breakpoint-up(md){
+                    @include media-breakpoint-up(lg){
                         font-size: 1.5em;
                     }
                 }
@@ -107,30 +134,73 @@ section{
 
             @include media-breakpoint-up(md){
                 img{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 80%;
+                //position: absolute;
+                // top: 0;
+                // left: 0;
+                // width: 80%;
 
-                &:nth-child(2){
-                    top: 10%;
-                    left: 10%;
-                }
+                // &:nth-child(2){
+                //     top: 10%;
+                //     left: 10%;
+                // }
 
-                &:nth-child(3){
-                    top: 20%;
-                    left: 20%;
-                }
+                // &:nth-child(3){
+                //     top: 20%;
+                //     left: 20%;
+                // }
             }}
         }
 
     }
 
     &#map{
+
+        .wrap{
+            position: relative;
+
+            .arrow{
+                svg{
+                    position: absolute;
+                    left: 0%;
+                    top: -20%;
+                    transform: scale(1.5) rotate(-90deg);
+                    z-index: 98;
+        
+                    @include media-breakpoint-up(md){
+                        left: 10%;
+                        top: 0;
+                        transform: scale(2) rotate(-110deg);
+                    }
+
+                    @include media-breakpoint-up(lg){
+                        left: 18%;
+                        top: 10%;
+                        transform: scale(2.5) rotate(-110deg);
+                    }
+                    
+                    g{
+                        stroke: theme-color(green);
+                        stroke-width: 2px;
+                        stroke-dasharray: 120;
+                        transition: .5s;
+                        stroke-dashoffset: -120;
+                    }
+                }
+
+                &.revealed{
+                    svg g{
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+        }
+
         #interactiveMap{
             margin: $grid-gutter auto 0;
-            max-width: 800px;
+            max-width: 1100px;
         }
+
+        
 
         #map_inner{
             &>div{
@@ -138,7 +208,7 @@ section{
             }
         }
 
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(sm){
             .map-wrap{
                 width: 100vw;
                 position: relative;
@@ -166,6 +236,7 @@ section{
             overflow: hidden;
             margin: $grid-gutter auto;
 
+            @include media-breakpoint-up(md){
             &.revealed{
                 .step{
                     .info{
@@ -200,6 +271,7 @@ section{
                         }
                     }
                 }
+            }
             }
         }
 
@@ -512,6 +584,15 @@ section{
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
+      }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
         opacity: 1;
       }
   }

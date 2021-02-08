@@ -8474,6 +8474,11 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
+scrollmagic@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/scrollmagic/-/scrollmagic-2.0.8.tgz#e0d7aff804c393c022fdc0c566f1edce3b4e9ed7"
+  integrity sha512-UYXEGBPVLziovXl3FjHGkY9c4UXKUKopIdXwWR2JapWxCo0U345wYegi7rcsv5vHf/ktc1bSNWy4QRFiV+Yccw==
+
 scrollreveal@^4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/scrollreveal/-/scrollreveal-4.0.7.tgz#a1e1a969431ec3b1dc6c19d8d36ed8fd8cfe4412"

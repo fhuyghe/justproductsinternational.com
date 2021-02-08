@@ -80,6 +80,7 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
     "react-simple-maps": "^2.3.0",
+    "scrollmagic": "^2.0.8",
     "scrollreveal": "^4.0.7",
     "slick-carousel": "^1.8.1"
   }

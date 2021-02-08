@@ -1,5 +1,6 @@
 import 'slick-carousel';
 import ScrollReveal from 'scrollreveal';
+import ScrollMagic from 'scrollmagic'
 
 export default {
   init() {
@@ -17,6 +18,17 @@ export default {
         $('.banner').removeClass('scrolled');
       }
     }
+
+    // Cutting intro string into chunks
+    var introTextSplit = $('#intro h3').text().split('.');
+    console.log(introTextSplit);
+    let $newText = '';
+    introTextSplit.forEach(string => {
+      if (string) { 
+        $newText += '<span>' + string + '.</span>';
+      }
+    });
+    $('#intro h3').html($newText);
 
     //Mobile menu
     $('.hamburger').on('click', function () {
@@ -133,5 +145,21 @@ export default {
     }
     
     ScrollReveal().reveal('.reveal', revealClass);
+
+    // Scrollmagic
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // create a scene
+    if (window.innerWidth > 770) {
+      new ScrollMagic.Scene({
+        duration: $('#menards .images').height() / 2 - $('#menards .info').height() / 2, // the scene should last for a scroll distance of 100px
+        triggerElement: '#menardInfo',
+        offset: $('#menards .info').height() / 2,
+      })
+        .setPin('#menardInfo') // pins the element for the the scene's duration
+        .addTo(controller); // assign the scene to the controller
+    }
+
   },
 };

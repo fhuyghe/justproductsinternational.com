@@ -21,7 +21,8 @@
 @if($menards)
   <section id="menards">
     <div class="row">
-      <div class="col-md-6 info">
+      <div class="col-md-6 info" >
+      <div id="menardInfo">
         <div class="logo">
           <img src="{{ $menards['logo']['sizes']['medium'] }}">
         </div>
@@ -37,6 +38,7 @@
               </div>
           @endforeach
         </div>
+      </div>
       </div>
       </div>
       <div class="col-md-6 images">
@@ -55,9 +57,14 @@
       <h3>{{ $map['title'] }}</h3>
       <a class="button" href="{{ $map['link'] }}" target="_blank">{{ $map['link_text'] }}</a>
     </header>
+    <div class="wrap">
+      <div class="arrow reveal">
+        @include('partials/arrow')
+      </div>
     <div class="map-wrap">
       <div id="interactiveMap" class="reveal">
         {!! do_shortcode('[display-map id="105"]') !!}
+      </div>
       </div>
     </div>
   </section>

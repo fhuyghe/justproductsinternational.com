@@ -38,7 +38,6 @@ section{
             margin: 0 auto $grid-gutter;
 
             span{
-                opacity: 0;
 
                 &:first-child{
                     display: block;
@@ -46,11 +45,14 @@ section{
                 }
 
                 &:nth-child(2){
+                    opacity: 0;
                     animation: slideUp 1s normal forwards;
                     animation-delay: .5s;
                 }
                 
                 &:last-child{
+                    opacity: 0;
+                    animation: slideUp 1s normal forwards;
                     animation-delay: 1s;
                     color: theme-color(green);
                 }

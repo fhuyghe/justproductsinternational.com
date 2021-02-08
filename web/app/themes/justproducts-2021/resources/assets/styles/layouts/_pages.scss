@@ -185,7 +185,10 @@ section{
                         stroke-width: 2px;
                         stroke-dasharray: 120;
                         transition: .5s;
-                        stroke-dashoffset: -120;
+
+                        @include media-breakpoint-up(md){
+                            stroke-dashoffset: -120;
+                        }
                     }
                 }
 

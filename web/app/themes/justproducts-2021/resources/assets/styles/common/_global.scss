@@ -14,11 +14,13 @@ body{
         text-transform: uppercase;
         font-size: 1.1em;
         padding-bottom: 5px;
+        width: auto;
+        margin: auto;
 
         background-image: url('../images/menards-swoosh.png');
         background-position: bottom center;
         background-repeat: no-repeat;
-        background-size: 150px auto;
+        background-size: 95% auto;
     }
 
     h3{

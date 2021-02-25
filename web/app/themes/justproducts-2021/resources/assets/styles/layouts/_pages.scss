@@ -32,6 +32,10 @@ section{
             margin-bottom: $grid-gutter;
         }
 
+        h2{
+            padding-bottom: 10px;
+        }
+
         h3{
             max-width: 800px;
             line-height: 1.5em;
@@ -290,6 +294,7 @@ section{
         .step{
             position: relative;
             height: 100%;
+            width: 20%;
 
             .wrap{
                 height: 100%;

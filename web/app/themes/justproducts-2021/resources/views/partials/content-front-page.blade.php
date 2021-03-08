@@ -63,7 +63,7 @@
       </div>
     <div class="map-wrap">
       <div id="interactiveMap" class="reveal">
-        {!! do_shortcode('[display-map id="105"]') !!}
+        {!! do_shortcode('[display-map id="198"]') !!}
       </div>
       </div>
     </div>

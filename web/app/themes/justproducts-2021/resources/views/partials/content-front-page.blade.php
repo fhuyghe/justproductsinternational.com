@@ -1,6 +1,7 @@
 @php $intro_video = $data['intro_video'] @endphp
 
 <section id="intro">
+  <div class="container">
   <div class="image">
     <img src="{{ $intro_video['poster']['sizes']['medium'] }}" />
   </div>
@@ -15,11 +16,13 @@
       </video>
     </div>
     @endif
+  </div>
 </section>
 
 @php $menards = $data['menards'] @endphp
 @if($menards)
   <section id="menards">
+    <div class="container">
     <div class="row">
       <div class="col-md-6 info" >
       <div id="menardInfo">
@@ -47,20 +50,23 @@
         @endforeach
       </div>
     </div>
+    </div>
   </section>
 @endif
 
 @php $map = $data['map'] @endphp
 @if($map)
   <section id="map">
+    <div class="container">
     <header>
       <h3>{{ $map['title'] }}</h3>
       <a class="button" href="{{ $map['link'] }}" target="_blank">{{ $map['link_text'] }}</a>
     </header>
+    </div>
     <div class="wrap">
-      <div class="arrow reveal">
+      {{-- <div class="arrow reveal">
         @include('partials/arrow')
-      </div>
+      </div> --}}
     <div class="map-wrap">
       <div id="interactiveMap" class="reveal">
         {!! do_shortcode('[display-map id="198"]') !!}
@@ -74,6 +80,7 @@
 @php $howItWorks = $data['how_it_works'] @endphp
 @if($howItWorks)
   <section id="how">
+    <div class="container">
     <header>
       <h2>{{ $howItWorks['title'] }}</h2>
       <h3>{{ $howItWorks['subtitle'] }}</h3>
@@ -97,7 +104,8 @@
         </div>
       @endforeach
     </div>
-    <a class="button" href="#contact" target="_blank">Contact Us</a>
+      <a class="button" href="#contact" target="_blank">Contact Us</a>
+    </div>
   </section>
 @endif
 
@@ -105,6 +113,7 @@
 @php $products = $data['products'] @endphp
 @if($products)
   <section id="products">
+    <div class="container">
     <header>
       <h2>{{ $products['title'] }}</h2>
       <h3>{{ $products['subtitle'] }}</h3>
@@ -123,6 +132,7 @@
           @endforeach
         </div>    
       @endif
+    </div>
   </section>
 @endif
 
@@ -130,6 +140,7 @@
 @php $testimonials = $data['testimonials'] @endphp
 @if($testimonials)
   <section id="testimonials">
+    <div class="container">
     <header>
       <h2>{{ $testimonials['title'] }}</h2>
       <h3>{{ $testimonials['subtitle'] }}</h3>
@@ -149,6 +160,7 @@
       </div>
       @endforeach
     </div>
+    </div>
   </section>
 @endif
 
@@ -156,6 +168,7 @@
 @php $contact = $data['contact'] @endphp
 @if($contact)
 <section id="contact">
+  <div class="container">
   <header>
     <h2>{{ $contact['title'] }}</h2>
   </header>
@@ -174,6 +187,7 @@
       {!! do_shortcode('[wpforms id="87" title="false"]') !!}
     </div>
   </div>
+  </div>
 </section>
 @endif
 
@@ -181,6 +195,7 @@
 @php $faq = $data['faq'] @endphp
 @if($faq)
 <section id="faq">
+  <div class="container">
   <h3>{{ $faq['title'] }}</h3>
   <div id="questions">
     @foreach ($faq['questions'] as $question)    
@@ -194,6 +209,7 @@
         </div>
       </div>
     @endforeach
+  </div>
   </div>
 </section>
 @endif

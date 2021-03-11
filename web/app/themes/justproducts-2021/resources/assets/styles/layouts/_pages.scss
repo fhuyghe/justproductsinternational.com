@@ -171,49 +171,50 @@ section{
         .wrap{
             position: relative;
 
-            .arrow{
-                svg{
-                    position: absolute;
-                    left: 0%;
-                    top: -20%;
-                    transform: scale(1.5) rotate(-90deg);
-                    z-index: 98;
+            // .arrow{
+            //     svg{
+            //         position: absolute;
+            //         left: 0%;
+            //         top: -20%;
+            //         transform: scale(1.5) rotate(-90deg);
+            //         z-index: 98;
         
-                    @include media-breakpoint-up(md){
-                        left: 10%;
-                        top: 0;
-                        transform: scale(2) rotate(-110deg);
-                    }
+            //         @include media-breakpoint-up(md){
+            //             left: 10%;
+            //             top: 0;
+            //             transform: scale(2) rotate(-110deg);
+            //         }
 
-                    @include media-breakpoint-up(lg){
-                        left: 18%;
-                        top: 10%;
-                        transform: scale(2.5) rotate(-110deg);
-                    }
+            //         @include media-breakpoint-up(lg){
+            //             left: 18%;
+            //             top: 10%;
+            //             transform: scale(2.5) rotate(-110deg);
+            //         }
                     
-                    g{
-                        stroke: theme-color(green);
-                        stroke-width: 2px;
-                        stroke-dasharray: 120;
-                        transition: .5s;
+            //         g{
+            //             stroke: theme-color(green);
+            //             stroke-width: 2px;
+            //             stroke-dasharray: 120;
+            //             transition: .5s;
 
-                        @include media-breakpoint-up(md){
-                            stroke-dashoffset: -120;
-                        }
-                    }
-                }
+            //             @include media-breakpoint-up(md){
+            //                 stroke-dashoffset: -120;
+            //             }
+            //         }
+            //     }
 
-                &.revealed{
-                    svg g{
-                        stroke-dashoffset: 0;
-                    }
-                }
-            }
+            //     &.revealed{
+            //         svg g{
+            //             stroke-dashoffset: 0;
+            //         }
+            //     }
+            // }
         }
 
         #interactiveMap{
             margin: $grid-gutter auto 0;
-            max-width: 1100px;
+            max-width: 1500px; 
+            padding: 0 $grid-gutter;
         }
 
         

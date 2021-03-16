@@ -46,7 +46,7 @@
       </div>
       <div class="col-md-6 images">
         @foreach ($menards['images'] as $image)
-          <img src="{{ $image['sizes']['large'] }}">
+          <img class="stacked-image" src="{{ $image['sizes']['large'] }}">
         @endforeach
       </div>
     </div>

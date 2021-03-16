@@ -133,10 +133,10 @@ section{
         .images{
             position: relative;
 
-            img{
+            .stacked-image{
                 width: 100%;
                 margin-bottom: $grid-gutter;
-                display: none;
+                display: none; 
 
                 &:nth-child(1),
                 &:nth-child(2){
@@ -145,22 +145,38 @@ section{
             }
 
             @include media-breakpoint-up(md){
-                img{
-                    display: block;
-                //position: absolute;
-                // top: 0;
-                // left: 0;
-                // width: 80%;
+                .stacked-image{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 80%;
+                opacity: 0;
+                transition: .25s;
 
-                // &:nth-child(2){
-                //     top: 10%;
-                //     left: 10%;
-                // }
+                &.visible{
+                    opacity: 1;
+                }
 
-                // &:nth-child(3){
-                //     top: 20%;
-                //     left: 20%;
-                // }
+                &:nth-child(2){
+                    top: 5%;
+                    left: 5%;
+                }
+
+                &:nth-child(3){
+                    top: 10%;
+                    left: 10%;
+                }
+                
+                &:nth-child(4){
+                    top: 15%;
+                    left: 15%;
+                }
+
+                &:nth-child(5){
+                    top: 20%;
+                    left: 20%;
+                }
             }}
         }
 

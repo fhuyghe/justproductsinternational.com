@@ -153,7 +153,8 @@ export default {
     // create a scene
     if (window.innerWidth > 770) {
       new ScrollMagic.Scene({
-        duration: 600, // the scene should last for a scroll distance of 100px
+        offset: 150,
+        duration: 300, // the scene should last for a scroll distance of 100px
         triggerElement: '#menardInfo',
       })
         .setPin('#menardInfo') // pins the element for the the scene's duration
@@ -163,7 +164,7 @@ export default {
     for (var i=0; i<revealElements.length; i++) { // create a scene for each element
       new ScrollMagic.Scene({
                 triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-                offset: 50 * i + 50,												 // start a little later
+                offset: 75 * i + 200,												 // start a little later
                 triggerHook: 0.9,
               })
               .setClassToggle(revealElements[i], 'visible') // add class toggle

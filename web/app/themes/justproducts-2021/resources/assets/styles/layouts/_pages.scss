@@ -152,10 +152,12 @@ section{
                 left: 0;
                 width: 80%;
                 opacity: 0;
-                transition: .25s;
+                transition: .5s;
+                transform: translate(50px);
 
                 &.visible{
                     opacity: 1;
+                    transform: translate(0);
                 }
 
                 &:nth-child(2){

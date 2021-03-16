@@ -159,7 +159,7 @@ export default {
         .setPin('#menardInfo') // pins the element for the the scene's duration
         .addTo(controller); // assign the scene to the controller
       
-    var revealElements = document.getElementsByClassName('.stacked-image');
+    var revealElements = document.getElementsByClassName('stacked-image');
     for (var i=0; i<revealElements.length; i++) { // create a scene for each element
       new ScrollMagic.Scene({
                 triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
